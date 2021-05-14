@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3400820-26ea-4852-8150-2381405e6955" name="Default Changelist" comment="Init" />
+    <list default="true" id="c3400820-26ea-4852-8150-2381405e6955" name="Default Changelist" comment="Init">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/CustomAnthenticatorAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/CustomAnthenticatorAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -140,6 +148,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -147,12 +156,27 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="php bin/console make:user" />
       <command value="php bin/console make:auth" />
       <command value="php bin/console doctrine:database:create" />
       <command value="php bin/console d:d:c" />
-      <command value="php bin/console doctrine:migrations:migrate" />
+      <command value="php bin/console: make regristration:form" />
       <command value="php bin/console:make regristration:form" />
+      <command value="php bin/console make regristration:form" />
+      <command value="php bin/console make regristration-form" />
+      <command value="php bin/console make:regristration-form" />
+      <command value="php bin/console make:registration-form" />
+      <command value="php bin/console: make entity : User" />
+      <command value="php bin/console: make entity:User" />
+      <command value="php bin/console: make : entity User" />
+      <command value="php bin/console make:enity User" />
+      <command value="php bin/console make:entity User" />
+      <command value="php bin/console make : entity User" />
+      <command value="php bin/console: make:entity User" />
+      <command value="php bin/console make:user" />
+      <command value="php bin/console make:entity user" />
+      <command value="php bin/console make:migration" />
+      <command value="php bin/console doctrine:migrations:migrate" />
+      <command value="php bin/console doctrine:migrate" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -163,7 +187,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620928989602</updated>
-      <workItem from="1620928992931" duration="2820000" />
+      <workItem from="1620928992931" duration="4232000" />
+      <workItem from="1620953631997" duration="1393000" />
+      <workItem from="1620981487043" duration="5265000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1620929918014</created>
@@ -186,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620931675124</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Init">
+      <created>1620932417324</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620932417444</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +235,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
