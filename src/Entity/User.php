@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -41,6 +43,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $name;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Situation::class, mappedBy="user")
+     */
+    private $situations;
+
+    public function __construct()
+    {
+        $this->situations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -131,6 +143,36 @@ class User implements UserInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Situation[]
+     */
+    public function getSituations(): Collection
+    {
+        return $this->situations;
+    }
+
+    public function addSituation(Situation $situation): self
+    {
+        if (!$this->situations->contains($situation)) {
+            $this->situations[] = $situation;
+            $situation->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSituation(Situation $situation): self
+    {
+        if ($this->situations->removeElement($situation)) {
+            // set the owning side to null (unless already changed)
+            if ($situation->getUser() === $this) {
+                $situation->setUser(null);
+            }
+        }
 
         return $this;
     }
